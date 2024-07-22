@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FileDisplay from "./components/FileDisplay";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
@@ -11,6 +11,10 @@ function App() {
     setFile(null);
     setAudioStream(null);
   }
+
+  useEffect(() => {
+    console.log(audioStream);
+  }, [audioStream]);
 
   const isAudioAvailable = file || audioStream;
   return (
