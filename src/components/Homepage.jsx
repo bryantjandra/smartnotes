@@ -1,4 +1,5 @@
-function Homepage() {
+function Homepage(props) {
+  const { setAudioStream, setFile } = props;
   return (
     <main className="flex-1  text-center p-4 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 pb-20">
       <h1 className="font-semibold text-5xl sm:text-6xl md:text-7xl">
@@ -18,7 +19,16 @@ function Homepage() {
       <p className="text-base">
         Or {""}
         <label className="text-blue-400 cursor-pointer hover:text-blue-600 duration-200">
-          upload <input className="hidden" type="file" accept=".mp3,.wave" />
+          upload{" "}
+          <input
+            onChange={() => {
+              const tempFile = e.target.files[0];
+              setFile(tempFile);
+            }}
+            className="hidden"
+            type="file"
+            accept=".mp3,.wave"
+          />
         </label>
         a mp3 file
       </p>
