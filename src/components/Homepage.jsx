@@ -11,8 +11,8 @@ function Homepage() {
           <span className="text-blue-400">Translate</span>
         </span>
       </h3>
-      <button className="flex items-center text-base justify-between gap-4 mx-auto w-72 max-w-full my-4">
-        <p>Record</p>
+      <button className="flex items-center text-base justify-between gap-4 mx-auto w-72 max-w-full specialBtn px-4 py-2 rounded-xl my-4">
+        <p className="text-blue-400">Record</p>
         <i className="fa-solid fa-microphone"></i>
       </button>
       <p className="text-base">
