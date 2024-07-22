@@ -15,7 +15,7 @@ function Homepage(props) {
     console.log("Start Recording");
 
     try {
-      const streamData = navigator.mediaDevices.getUserMedia({
+      const streamData = await navigator.mediaDevices.getUserMedia({
         audio: true,
         video: false,
       });
@@ -24,6 +24,8 @@ function Homepage(props) {
       console.log(err.message);
       return;
     }
+
+    setRecordingStatus("recording");
     //create new Media recorder instance using the stream
     const media = new MediaRecorder(tempStream, { type: mimeType });
     mediaRecorder.current = media;
@@ -37,6 +39,17 @@ function Homepage(props) {
         return;
       }
       setAudioChunks((audioChunk) => [...audioChunk, e.data]);
+    };
+  }
+
+  async function stopRecording() {
+    setRecordingStatus("inactive");
+    console.log("Stop Recording");
+    mediaRecorder.current.stop();
+    mediaRecorder.current.onstop = () => {
+      const audioBlob = new Blob(audioChunks, { type: mimeType });
+      setAudioStream(audioBlob);
+      setAudioChunks([]);
     };
   }
 
