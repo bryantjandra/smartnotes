@@ -1,10 +1,10 @@
 function Homepage() {
   return (
-    <main className="flex-1  text-center p-4 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5">
+    <main className="flex-1  text-center p-4 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 pb-20">
       <h1 className="font-semibold text-5xl sm:text-6xl md:text-7xl">
         transla<span className="text-blue-400 bold">scribe</span>
       </h1>
-      <h3 className="font-medium">
+      <h3 className="font-medium md:text-lg">
         Record
         <span className="text-blue-400">
           &rarr; Transcribe <span className="text-blue-400">&rarr;</span>
