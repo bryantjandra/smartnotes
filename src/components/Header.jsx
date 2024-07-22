@@ -4,7 +4,7 @@ function Header() {
       <h1 className="font-medium">
         transla<span className="text-blue-400 font-bold">scribe</span>
       </h1>
-      <button className="flex items-center gap-2 specialBtn px-4 py-2 rounded-lg text-blue-400">
+      <button className="flex items-center gap-2 specialBtn px-3 py-2 rounded-lg text-blue-400">
         <p>New</p>
         <i className="fa-solid fa-plus"></i>
       </button>
