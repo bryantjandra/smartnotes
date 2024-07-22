@@ -5,12 +5,24 @@ function Homepage() {
         transla<span className="text-blue-400 bold">scribe</span>
       </h1>
       <h3 className="font-medium md:text-lg">
-        Record
+        Record {""}
         <span className="text-blue-400">
           &rarr; Transcribe <span className="text-blue-400">&rarr;</span>
-          <span className="text-blue-400">&rarr;Translate</span>
+          <span className="text-blue-400">Translate</span>
         </span>
       </h3>
+      <button className="flex items-center text-base justify-between gap-4 mx-auto w-72 max-w-full my-4">
+        <p>Record</p>
+        <i className="fa-solid fa-microphone"></i>
+      </button>
+      <p className="text-base">
+        Or {""}
+        <label className="text-blue-400 cursor-pointer hover:text-blue-600 duration-200">
+          upload <input className="hidden" type="file" accept=".mp3,.wave" />
+        </label>
+        a mp3 file
+      </p>
+      <p className="italic text-slate-500">Speak. Transcribe. Translate.</p>
     </main>
   );
 }
