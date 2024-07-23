@@ -1,4 +1,5 @@
-function Translation() {
+function Translation(props) {
+  const { translation } = props;
   return <div></div>;
 }
 

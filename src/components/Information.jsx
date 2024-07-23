@@ -6,6 +6,28 @@ function Information(props) {
   const { output } = props;
   console.log(output);
   const [tab, setTab] = useState("transcription");
+  const [translation, setTranslation] = useState(null);
+  const [toLanguage, setToLanguage] = useState(null);
+  const [translating, setTranslating] = useState(null);
+
+  function handleCopy() {
+    navigator.clipboard.writeText();
+  }
+
+  function handleDownload() {
+    const element = document.createElement("a");
+    const file = new Blob([], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download(`translascribe_${new Date().toDateString()}.txt`);
+    document.body.appendChild(element);
+    element.click();
+  }
+
+  function generateTranslation() {}
+
+  const textElement =
+    tab === "transcription" ? output.map((val) => val.text) : "";
+
   return (
     <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
       <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
