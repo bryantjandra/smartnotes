@@ -30,15 +30,17 @@ function Homepage(props) {
     mediaRecorder.current = media;
     mediaRecorder.current.start();
 
-    mediaRecorder.current.ondataavailable = (e) => {
-      if (typeof e.data === "undefined") {
+    let localAudioChunks = [];
+    mediaRecorder.current.ondataavailable = (event) => {
+      if (typeof event.data === "undefined") {
         return;
       }
-      if (e.data.size === 0) {
+      if (event.data.size === 0) {
         return;
       }
-      setAudioChunks((audioChunk) => [...audioChunk, e.data]);
+      localAudioChunks.push(event.data);
     };
+    setAudioChunks(localAudioChunks);
   }
 
   async function stopRecording() {
