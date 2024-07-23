@@ -39,11 +39,27 @@ function Information(props) {
           Translation
         </button>
       </div>
-      {tab === "transcription" ? (
-        <Transcription {...props} />
-      ) : (
-        <Translation {...props} />
-      )}
+      <div className="my-8 flex flex-col">
+        {tab === "transcription" ? (
+          <Transcription {...props} />
+        ) : (
+          <Translation {...props} />
+        )}
+      </div>
+      <div className="flex items-center gap-4 mx-auto text-base">
+        <button
+          title="Copy"
+          className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration-200"
+        >
+          <i className="fa-solid fa-copy"></i>
+        </button>
+        <button
+          title="Download"
+          className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration:200 "
+        >
+          <i className="fa-solid fa-download"></i>
+        </button>
+      </div>
     </main>
   );
 }
