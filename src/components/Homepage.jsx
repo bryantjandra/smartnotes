@@ -107,10 +107,10 @@ function Homepage(props) {
             }}
             className="hidden"
             type="file"
-            accept=".mp3,.wav"
+            accept=".mp3"
           />
         </label>{" "}
-        a mp3 or wav file
+        a mp3 file
       </p>
       <p className="italic text-slate-400">
         Your Words, Any Language, Instantly.
