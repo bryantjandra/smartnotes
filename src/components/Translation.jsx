@@ -1,5 +1,5 @@
 function Translation() {
-  return <div>Translation</div>;
+  return <div></div>;
 }
 
 export default Translation;
