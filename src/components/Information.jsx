@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Transcription from "./Transcription.jsx";
 import Translation from "./Translation.jsx";
 
