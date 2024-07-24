@@ -60,7 +60,7 @@ function Information(props) {
     const element = document.createElement("a");
     const file = new Blob([textElement], { type: "text/plain" });
     element.href = URL.createObjectURL(file);
-    element.download(`translascribe_${new Date().toDateString()}.txt`);
+    element.download = `translascribe_${new Date().toDateString()}.txt`;
     document.body.appendChild(element);
     element.click();
   }
@@ -130,12 +130,14 @@ function Information(props) {
       </div>
       <div className="flex items-center gap-4 mx-auto text-base">
         <button
+          onClick={handleCopy}
           title="Copy"
           className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration-200"
         >
           <i className="fa-solid fa-copy"></i>
         </button>
         <button
+          onClick={handleDownload}
           title="Download"
           className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration:200 "
         >
