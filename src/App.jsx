@@ -91,7 +91,7 @@ function App() {
         {output ? (
           <Information output={output} finished={finished} />
         ) : loading ? (
-          <Transcribing />
+          <Transcribing downloading={downloading} />
         ) : isAudioAvailable ? (
           <FileDisplay
             handleFormSubmission={handleFormSubmission}
