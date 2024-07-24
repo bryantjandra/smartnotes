@@ -10,13 +10,55 @@ function Information(props) {
   const [toLanguage, setToLanguage] = useState("Select language");
   const [translating, setTranslating] = useState(null);
 
+  const worker = useRef(null);
+
+  useEffect(() => {
+    if (!worker.current) {
+      worker.current = new Worker(
+        new URL("../utils/translate.worker.js", import.meta.url),
+        {
+          type: "module",
+        }
+      );
+    }
+
+    const onMessageReceived = async (e) => {
+      switch (e.data.status) {
+        case "initiate":
+          console.log("DOWNLOADING");
+          break;
+        case "progress":
+          console.log("LOADING");
+          break;
+        case "update":
+          setTranslation(e.data.output);
+          console.log(e.data.output);
+          break;
+        case "complete":
+          setTranslating(false);
+          console.log("DONE");
+          break;
+      }
+    };
+
+    worker.current.addEventListener("message", onMessageReceived);
+
+    return () =>
+      worker.current.removeEventListener("message", onMessageReceived);
+  });
+
+  const textElement =
+    tab === "transcription"
+      ? output.map((val) => val.text)
+      : translation || "No translation!";
+
   function handleCopy() {
-    navigator.clipboard.writeText();
+    navigator.clipboard.writeText(textElement);
   }
 
   function handleDownload() {
     const element = document.createElement("a");
-    const file = new Blob([], { type: "text/plain" });
+    const file = new Blob([textElement], { type: "text/plain" });
     element.href = URL.createObjectURL(file);
     element.download(`translascribe_${new Date().toDateString()}.txt`);
     document.body.appendChild(element);
@@ -30,15 +72,12 @@ function Information(props) {
 
     setTranslating(true);
 
-    Worker.current.postMessage({
+    worker.current.postMessage({
       text: output.map((val) => val.text),
-      src_language: "eng_latin",
+      src_lang: "eng_Latn",
       tgt_lang: toLanguage,
     });
   }
-
-  const textElement =
-    tab === "transcription" ? output.map((val) => val.text) : "";
 
   return (
     <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
