@@ -23,7 +23,19 @@ function Information(props) {
     element.click();
   }
 
-  function generateTranslation() {}
+  function generateTranslation() {
+    if (translating || toLanguage === "Select language") {
+      return;
+    }
+
+    setTranslating(true);
+
+    Worker.current.postMessage({
+      text: output.map((val) => val.text),
+      src_language: "eng_latin",
+      tgt_lang: toLanguage,
+    });
+  }
 
   const textElement =
     tab === "transcription" ? output.map((val) => val.text) : "";
@@ -70,10 +82,10 @@ function Information(props) {
             textElement={textElement}
             toLanguage={toLanguage}
             translating={translating}
-            translation={translation}
             setTranslation={setTranslation}
             setTranslating={setTranslating}
             setToLanguage={setToLanguage}
+            generateTranslation={generateTranslation}
           />
         )}
       </div>
