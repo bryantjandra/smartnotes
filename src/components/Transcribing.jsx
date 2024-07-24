@@ -8,8 +8,8 @@ function Transcribing(props) {
         </h1>
         <p>
           {!downloading
-            ? "priming neural networks"
-            : "intelligent transcribers engaged"}
+            ? "engaging intelligent transcribers"
+            : "priming neural networks"}
         </p>
       </div>
       <div className="flex flex-col gap-2 sm:gap-4 max-w-[400px] mx-auto w-full">
