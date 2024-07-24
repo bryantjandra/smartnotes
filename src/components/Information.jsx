@@ -7,7 +7,7 @@ function Information(props) {
   console.log(output);
   const [tab, setTab] = useState("transcription");
   const [translation, setTranslation] = useState(null);
-  const [toLanguage, setToLanguage] = useState(null);
+  const [toLanguage, setToLanguage] = useState("Select language");
   const [translating, setTranslating] = useState(null);
 
   function handleCopy() {
@@ -63,9 +63,18 @@ function Information(props) {
       </div>
       <div className="my-8 flex flex-col">
         {tab === "transcription" ? (
-          <Transcription {...props} />
+          <Transcription {...props} textElement={textElement} />
         ) : (
-          <Translation {...props} />
+          <Translation
+            {...props}
+            textElement={textElement}
+            toLanguage={toLanguage}
+            translating={translating}
+            translation={translation}
+            setTranslation={setTranslation}
+            setTranslating={setTranslating}
+            setToLanguage={setToLanguage}
+          />
         )}
       </div>
       <div className="flex items-center gap-4 mx-auto text-base">
