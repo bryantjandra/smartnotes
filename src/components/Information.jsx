@@ -82,7 +82,10 @@ function Information(props) {
   return (
     <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
       <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
-        Your <span className="text-blue-400 font-bold">Transcription</span>
+        Your{" "}
+        <span className="text-blue-400 font-bold">
+          {tab === "transcription" ? "Transcription" : "Translation"}
+        </span>
       </h1>{" "}
       <div className="grid grid-cols-2 mx-auto bg-white  shadow rounded-full overflow-hidden items-center ">
         <button
