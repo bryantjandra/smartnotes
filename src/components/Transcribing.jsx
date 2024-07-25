@@ -6,7 +6,7 @@ function Transcribing(props) {
         <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl">
           <span className="text-indigo-400 font-bold">Transcribing</span>
         </h1>
-        <p>
+        <p className="text-white">
           {!downloading
             ? "engaging intelligent transcribers"
             : "priming neural networks"}

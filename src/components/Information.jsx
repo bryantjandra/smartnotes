@@ -81,7 +81,7 @@ function Information(props) {
 
   return (
     <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
-      <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
+      <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap text-white">
         Your{" "}
         <span className="text-indigo-400 font-bold">
           {tab === "transcription" ? "Transcription" : "Translation"}
@@ -135,14 +135,14 @@ function Information(props) {
         <button
           onClick={handleCopy}
           title="Copy"
-          className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration-200"
+          className="bg-white specialBtn text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration-200"
         >
           <i className="fa-solid fa-copy"></i>
         </button>
         <button
           onClick={handleDownload}
           title="Download"
-          className="bg-white text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration:200 "
+          className="bg-white specialBtn text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration:200 "
         >
           <i className="fa-solid fa-download"></i>
         </button>

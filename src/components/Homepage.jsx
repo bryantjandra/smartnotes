@@ -97,9 +97,9 @@ function Homepage(props) {
           </div>
         </div>
       </button>
-      <p className="text-base">
+      <p className="text-base text-white">
         Or{" "}
-        <label className="text-indigo-400 cursor-pointer hover:text-blue-600 duration-200">
+        <label className="text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200">
           upload{" "}
           <input
             onChange={(e) => {
