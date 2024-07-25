@@ -7,7 +7,6 @@ function Homepage(props) {
   const [duration, setDuration] = useState(0);
 
   const mediaRecorder = useRef(null);
-
   const mimeType = "audio/webm";
 
   async function startRecording() {
@@ -68,9 +67,10 @@ function Homepage(props) {
 
   return (
     <main className="flex-1 text-center p-4 flex flex-col justify-center gap-3 sm:gap-4 pb-20">
-      <h1 className="font-semibold text-5xl sm:text-6xl md:text-7xl">
+      <h1 className="font-semibold text-5xl sm:text6xl md:text-7xl">
         transla<span className="text-blue-400 font-bold">scribe</span>
       </h1>
+
       <h3 className="font-medium md:text-lg">
         Record <span className="text-blue-400">&rarr; </span> Transcribe{" "}
         <span className="text-blue-400">&rarr;</span>

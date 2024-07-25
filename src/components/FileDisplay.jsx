@@ -2,9 +2,9 @@ function FileDisplay(props) {
   const { handleAudioReset, file, audioStream, handleFormSubmission } = props;
 
   return (
-    <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20 w-72 max-w-full sm:w-96 mx-auto ">
+    <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4 pb-20 w-72 max-w-full sm:w-96 mx-auto ">
       <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl">
-        Your<span className="text-blue-400 font-bold">File</span>
+        Your&nbsp;<span className="text-blue-400 font-bold">File</span>
       </h1>
       <div className="flex flex-col text-left mb-4 my-4">
         <h3 className="font-semibold">Name:</h3>
