@@ -37,7 +37,7 @@ function Translation(props) {
             </select>
             <button
               onClick={generateTranslation}
-              className="specialBtn px-3 py-2 rounded-lg text-blue-400 hover:text-blue-600 duration:200"
+              className="specialBtn px-3 py-2 rounded-lg text-indigo-400 hover:text-blue-600 duration:200"
             >
               Translate
             </button>

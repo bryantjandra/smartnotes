@@ -83,7 +83,7 @@ function Information(props) {
     <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
       <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
         Your{" "}
-        <span className="text-blue-400 font-bold">
+        <span className="text-indigo-400 font-bold">
           {tab === "transcription" ? "Transcription" : "Translation"}
         </span>
       </h1>{" "}
@@ -96,7 +96,7 @@ function Information(props) {
             "px-4 py-2 duration-200 " +
             (tab === "transcription"
               ? "bg-blue-300 text-white"
-              : "text-blue-400 hover:text-blue-500")
+              : "text-indigo-400 hover:text-blue-500")
           }
         >
           Transcription
@@ -109,7 +109,7 @@ function Information(props) {
             "px-4 py-2  duration-200 " +
             (tab === "translation"
               ? "bg-blue-300 text-white"
-              : "text-blue-400 hover:text-blue-500")
+              : "text-indigo-400 hover:text-blue-500")
           }
         >
           Translation
