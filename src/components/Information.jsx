@@ -73,7 +73,7 @@ function Information(props) {
     setTranslating(true);
 
     worker.current.postMessage({
-      text: output.map((val) => val.text),
+      text: output.map((val) => val.text).join(" "),
       src_lang: "eng_Latn",
       tgt_lang: toLanguage,
     });

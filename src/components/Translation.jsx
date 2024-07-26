@@ -12,7 +12,7 @@ function Translation(props) {
   } = props;
 
   return (
-    <div className="flex flex-col gap-2 max-w-[400px] w-full mx-auto">
+    <div className="flex flex-col gap-2 max-w-[800px] w-full mx-auto">
       {!translating && (
         <div className="flex flex-col gap-1">
           <p className="text-xs sm:text-sm text-slate-500 font-medium mr-auto">
@@ -44,9 +44,13 @@ function Translation(props) {
           </div>
         </div>
       )}
-      {textElement && !translating && (
-        <p className="text-white text-lg mx-auto mt-5">{textElement}</p>
-      )}
+
+      <div>
+        {textElement && !translating && (
+          <p className="text-white text-lg mx-auto mt-5">{textElement}</p>
+        )}
+      </div>
+
       {translating && (
         <div className="grid place-items-center">
           <i className="fa-solid fa-spinner animate-spin"></i>
