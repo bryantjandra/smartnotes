@@ -49,7 +49,7 @@ function Information(props) {
 
   const textElement =
     tab === "transcription"
-      ? output.map((val) => val.text)
+      ? output.map((val) => val.text).join(" ")
       : translation || "No translation!";
 
   function handleCopy() {

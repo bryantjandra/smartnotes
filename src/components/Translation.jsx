@@ -44,7 +44,9 @@ function Translation(props) {
           </div>
         </div>
       )}
-      {textElement && !translating && <p>{textElement}</p>}
+      {textElement && !translating && (
+        <p className="text-white text-lg mx-auto mt-5">{textElement}</p>
+      )}
       {translating && (
         <div className="grid place-items-center">
           <i className="fa-solid fa-spinner animate-spin"></i>
