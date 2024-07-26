@@ -50,7 +50,7 @@ function Information(props) {
   const textElement =
     tab === "transcription"
       ? output.map((val) => val.text).join(" ")
-      : translation || "No translation!";
+      : translation || "";
 
   function handleCopy() {
     navigator.clipboard.writeText(textElement);
@@ -80,14 +80,14 @@ function Information(props) {
   }
 
   return (
-    <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4  pb-20  max-w-prose w-full mx-auto ">
+    <main className="flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4 pb-20 max-w-prose w-full mx-auto">
       <h1 className="font-semibold text-center text-5xl sm:text-6xl md:text-7xl whitespace-nowrap text-white">
         Your{" "}
         <span className="text-indigo-400 font-bold">
           {tab === "transcription" ? "Transcription" : "Translation"}
         </span>
-      </h1>{" "}
-      <div className="grid grid-cols-2 mx-auto bg-white  shadow rounded-full overflow-hidden items-center ">
+      </h1>
+      <div className="grid grid-cols-2 mx-auto bg-white shadow rounded-full overflow-hidden items-center">
         <button
           onClick={() => {
             setTab("transcription");
@@ -95,8 +95,8 @@ function Information(props) {
           className={
             "px-4 py-2 duration-200 " +
             (tab === "transcription"
-              ? "bg-blue-300 text-white"
-              : "text-indigo-400 hover:text-blue-500")
+              ? "bg-indigo-500 text-white"
+              : "text-indigo-400 hover:text-indigo-500 hover:bg-indigo-200 ")
           }
         >
           Transcription
@@ -106,10 +106,10 @@ function Information(props) {
             setTab("translation");
           }}
           className={
-            "px-4 py-2  duration-200 " +
+            "px-4 py-2 duration-200 " +
             (tab === "translation"
-              ? "bg-blue-300 text-white"
-              : "text-indigo-400 hover:text-blue-500")
+              ? "bg-indigo-500 text-white"
+              : "text-indigo-400 hover:text-indigo-500 hover:bg-indigo-100")
           }
         >
           Translation
@@ -142,7 +142,7 @@ function Information(props) {
         <button
           onClick={handleDownload}
           title="Download"
-          className="bg-white specialBtn text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration:200 "
+          className="bg-white specialBtn text-blue-300 px-2 aspect-square grid place-items-center rounded hover:text-blue-500 duration-200"
         >
           <i className="fa-solid fa-download"></i>
         </button>

@@ -83,7 +83,7 @@ function Homepage(props) {
         className="flex items-center text-base justify-between gap-4 mx-auto w-72 max-w-full specialBtn px-4 py-2 rounded-xl my-4"
       >
         <div className="flex items-center justify-between w-full">
-          <p className="text-white font-thin">
+          <p className="text-white font-light">
             {recordingStatus === "inactive" ? "Record" : "Stop Recording"}
           </p>
           <div className="flex items-center gap-2">

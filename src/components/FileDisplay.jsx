@@ -15,7 +15,7 @@ function FileDisplay(props) {
           onClick={() => {
             handleAudioReset();
           }}
-          className="text-indigo-300 hover:text-blue-600 duration-200"
+          className="text-indigo-300 hover:text-indigo-200 duration-200"
         >
           Reset
         </button>

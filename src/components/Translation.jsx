@@ -15,13 +15,10 @@ function Translation(props) {
     <div className="flex flex-col gap-2 max-w-[800px] w-full mx-auto">
       {!translating && (
         <div className="flex flex-col gap-1">
-          <p className="text-xs sm:text-sm text-slate-500 font-medium mr-auto">
-            To Language
-          </p>
           <div className="flex items-stretch gap-2">
             <select
               value={toLanguage}
-              className="flex-1 outline-none bg-stone-400 focus:outline-none border-solid border-transparent hover:border-blue-300 duration-200 p-2 rounded opacity-50"
+              className="flex-1 outline-none bg-stone-900 focus:outline-none text-white border-solid border-transparent hover:border-blue-300 duration-200 p-2 rounded opacity-50"
               onChange={(e) => {
                 setToLanguage(e.target.value);
               }}
@@ -45,14 +42,12 @@ function Translation(props) {
         </div>
       )}
 
-      <div>
-        {textElement && !translating && (
-          <p className="text-white text-lg mx-auto mt-5">{textElement}</p>
-        )}
-      </div>
+      {textElement && !translating && (
+        <p className="text-white text-lg mx-auto mt-5">{textElement}</p>
+      )}
 
       {translating && (
-        <div className="grid place-items-center">
+        <div className="grid place-items-center text-white">
           <i className="fa-solid fa-spinner animate-spin"></i>
         </div>
       )}
