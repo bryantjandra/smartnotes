@@ -66,10 +66,14 @@ function Homepage(props) {
   }, [recordingStatus]);
 
   return (
-    <main className="flex-1 text-center p-4 flex flex-col justify-center gap-3 sm:gap-4 pb-20">
-      <section id="hero" className="my-4">
+    <main className="flex-1 text-center p-4 flex flex-col">
+      <section
+        id="hero"
+        className="flex flex-col justify-center gap-3 pb-20 h-screen"
+      >
         <h1 className="font-semibold text-5xl sm:text6xl md:text-7xl text-white">
-          transla<span className="text-indigo-400 font-bold">scribe</span>
+          transla
+          <span className="text-indigo-400 font-bold">scribe</span>
         </h1>
 
         <h3 className="font-normal md:text-lg text-white">
@@ -118,6 +122,96 @@ function Homepage(props) {
         <p className="italic text-slate-400">
           Your Words, Any Language, Instantly.
         </p>
+      </section>
+
+      <section id="about" className="p-4 flex flex-col gap-10 mb-60">
+        <div className="flex flex-col gap-10 max-w-[800px] w-full mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-semibold text-white">
+            transla
+            <span className=" font-sans text-indigo-400 font-bold">
+              scribe{" "}
+            </span>
+            {""}
+            works in <b className="text-indigo-400">2</b>{" "}
+            <span className="font-sans font-bold underline-effect">
+              simple steps
+            </span>
+          </h1>
+
+          <p className="text-white font-normal">
+            Experience seamless audio-to-text conversion and
+            <b className="text-indigo-400"> transcribe </b>
+            your recordings with near-human accuracy or
+            <b className="text-indigo-400"> translate </b> them into your
+            preferred language, making your content accessible to a wider
+            audience.
+          </p>
+        </div>
+        <div class="flex flex-col flex-wrap sm:flex-row gap-4 md:gap-6 max-w-[800px] w-full mx-auto px-8">
+          <div class="flex flex-col gap-4 p-4 relative rounded-lg border flex-1 bg-slate-950 shadow-lg min-w-[180px] border-solid  overflow-hidden specialShadow text-white ">
+            <div class="hidden sm:flex flex-col gap-4">
+              <div class="flex items-center justify-between gap-2  z-10">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl  font-semibold">
+                  01{" "}
+                </h3>
+                <div class="text-xl sm:text-2xl md:text-3xl">
+                  <i class="fa-solid fa-pen-clip"></i>
+                </div>
+              </div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-left">
+                Transcribe
+              </h3>
+            </div>
+            <div class="flex sm:hidden flex-col gap-4">
+              <div class="flex items-center justify-between gap-2  z-10">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl  font-semibold">
+                  01{" "}
+                </h3>
+                <h3 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                  Transcribe
+                </h3>
+                <div class="text-xl sm:text-2xl md:text-3xl">
+                  <i class="fa-solid fa-pen-clip"></i>
+                </div>
+              </div>
+            </div>
+            <p class="z-10 text-center sm:text-left">
+              Transcribe your audio file with near-human accuracy.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 p-4 relative rounded-lg border flex-1 bg-slate-950 shadow-lg min-w-[180px] border-solid specialShadow overflow-hidden text-white ">
+            <div class="hidden sm:flex flex-col gap-4">
+              <div class="flex items-center justify-between gap-2  z-10">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl  font-semibold">
+                  02{" "}
+                </h3>
+                <div class="text-xl sm:text-2xl md:text-3xl">
+                  <i class="fa-solid fa-earth-americas"></i>
+                </div>
+              </div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-left ">
+                Translate
+              </h3>
+            </div>
+            <div class="flex sm:hidden flex-col gap-4">
+              <div class="flex items-center justify-between gap-2  z-10">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl  font-semibold">
+                  02{" "}
+                </h3>
+                <h3 class="text-lg sm:text-xl md:text-2xl font-semibold">
+                  Translate
+                </h3>
+                <div class="text-xl sm:text-2xl md:text-3xl">
+                  <i class="fa-solid fa-earth-americas"></i>
+                </div>
+              </div>
+            </div>
+            <p class="z-10 text-center sm:text-left">
+              Languages can be hard, so enjoy your notes in your language.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
