@@ -10,7 +10,9 @@ class MyTranscriptionPipeline {
 
   static async getInstance(progress_callback = null) {
     if (this.instance === null) {
-      this.instance = await pipeline(this.task, null, { progress_callback });
+      this.instance = await pipeline(this.task, null, {
+        progress_callback,
+      });
     }
 
     return this.instance;
@@ -38,12 +40,13 @@ async function transcribe(audio) {
   sendLoadingMessage("success");
 
   const stride_length_s = 5;
+  const chunk_length = 30;
 
   const generationTracker = new GenerationTracker(pipeline, stride_length_s);
   await pipeline(audio, {
     top_k: 0,
     do_sample: false,
-    chunk_length: 30,
+    chunk_length,
     stride_length_s,
     return_timestamps: true,
     callback_function:

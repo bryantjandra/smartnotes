@@ -72,8 +72,8 @@ function Homepage(props) {
         className="flex flex-col justify-center gap-3 pb-20 h-screen"
       >
         <h1 className="font-semibold text-5xl sm:text6xl md:text-7xl text-white">
-          transla
-          <span className="text-indigo-400 font-bold">scribe</span>
+          smart
+          <span className="text-indigo-400 font-bold">notes</span>
         </h1>
 
         <h3 className="font-normal md:text-lg text-white">
@@ -117,34 +117,33 @@ function Homepage(props) {
               accept=".mp3"
             />
           </label>{" "}
-          an mp3 file
+          to get started
         </p>
         <p className="italic text-slate-400">
-          Your Words, Any Language, Instantly.
+          Your Notes, Your Language, Enhanced by AI.
         </p>
       </section>
 
       <section id="about" className="p-4 flex flex-col gap-10 mb-60">
         <div className="flex flex-col gap-10 max-w-[800px] w-full mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-semibold text-white">
-            transla
-            <span className=" font-sans text-indigo-400 font-bold">
-              scribe{" "}
-            </span>
+            smart
+            <span className=" font-sans text-indigo-400 font-bold">notes </span>
             {""}
-            works in <b className="text-indigo-400">2</b>{" "}
+            simplifies your workflow in <b className="text-indigo-400">
+              2
+            </b>{" "}
             <span className="font-sans font-bold underline-effect">
-              simple steps
+              smart steps
             </span>
           </h1>
 
           <p className="text-white font-normal">
-            Experience seamless audio-to-text conversion and
+            Transform your voice into organized notes within seconds. Seamlessly
             <b className="text-indigo-400"> transcribe </b>
-            your recordings with near-human accuracy or
-            <b className="text-indigo-400"> translate </b> them into your
-            preferred language, making your content accessible to a wider
-            audience.
+            your thoughts and <b className="text-indigo-400">translate</b> them
+            into any language, making your ideas instantly accessible and easy
+            to share.
           </p>
         </div>
         <div class="flex flex-col flex-wrap sm:flex-row gap-4 md:gap-6 max-w-[800px] w-full mx-auto px-8">
@@ -176,7 +175,7 @@ function Homepage(props) {
               </div>
             </div>
             <p class="z-10 text-center sm:text-left">
-              Transcribe your audio file with near-human accuracy.
+              Convert your voice or lectures into notes with AI-driven accuracy.
             </p>
           </div>
 
@@ -208,7 +207,8 @@ function Homepage(props) {
               </div>
             </div>
             <p class="z-10 text-center sm:text-left">
-              Languages can be hard, so enjoy your notes in your language.
+              Break language barriers by translating notes into your preferred
+              language.
             </p>
           </div>
         </div>
