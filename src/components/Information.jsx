@@ -133,7 +133,7 @@ function Information(props) {
       </div>
       <p className="text-slate-400 italic text-center">
         {tab === "transcription"
-          ? "Easily convert speech into detailed notes."
+          ? ""
           : "Seamlessly translate your notes into any language."}
       </p>
       <div className="flex items-center gap-4 mx-auto text-base">
