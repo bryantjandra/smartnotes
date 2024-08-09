@@ -4,7 +4,7 @@
 
 **smartnotes.ai** is an AI-powered note-taking application that uses deep learning models to transcribe and translate audio recordings into text. Whether you're a student or a professional, this web app provides an efficient and accessible solution for converting speech into text across multiple languages. 
 
-Try it out: https://smartnotes-ai.netlify.app/
+Try it out at: https://smartnotes-ai.netlify.app/
 
 ## Features
 
